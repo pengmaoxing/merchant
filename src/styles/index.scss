@@ -1,0 +1,155 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app{
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+div:focus{
+  outline: none;
+ }
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+.filter-container {
+  padding-bottom: 10px;
+  .filter-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+}
+
+//main-container全局样式
+.app-container {
+  padding: 20px;
+}
+
+.pagination-container {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.action-container{
+  margin-bottom: 10px;
+}
+
+.action-container .el-button{
+  margin-left: 0;
+}
+
+//表格图片预览样式
+.tablePhotoPreviewContainer .el-dialog__header{
+  padding: 0;
+}
+.tablePhotoPreviewContainer img{
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+//xwy 20191115
+.login-special {
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+
+  $bg: #ffffff;
+  $light_gray: rgba(204, 204, 204, 1);
+  $text_gray: rgb(198, 198, 198);
+  $text_white: rgb(255, 255, 255);
+
+  .el-input {
+    display: inline-block;
+    height: 40px;
+    width: 85%;
+    color:  $text_gray;
+
+    input {
+      background: transparent;
+      border: 0px solid $light_gray;
+      width: 300px;
+      -webkit-appearance: none;
+      border-radius: 0px;
+      padding: 12px 5px 12px 15px;
+      height: 40px;
+      color: $text_gray !important;
+
+      .el-input input{
+        color: $text_gray !important;
+      }
+
+      &:-webkit-autofill {
+        color:  $text_gray;
+        -webkit-animation-name: autofill !important;
+        -webkit-animation-fill-mode: both !important;
+      }
+
+      @-webkit-keyframes autofill {
+        to {
+          color: $text_gray ; //input中文字的颜色
+          background: transparent;
+        }
+      }
+    }
+  }
+}
